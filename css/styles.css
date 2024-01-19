@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,300;0,400;1,200&family=Dancing+Script:wght@400;600&family=Inconsolata:wght@200&family=Londrina+Solid:wght@300&family=Montserrat:wght@300;800;900&family=Nanum+Pen+Script&family=Permanent+Marker&family=Roboto:wght@900&family=Rock+Salt&display=swap');
+
+/* series of custom CSS variables for the page. */
+:root {
+    --gold1: #f0f0ef;
+    --gold2: #f8f8f8;
+    --gray: #ffffff80;
+    --gray2: #f7d9d990;
+    --black1: #1A1B1F;
+    --black2: #30353B;
+    --shadow: 0 8px 8px;
+    --color_shadow: #00000033;
+}
+
+/* initial styles for all page elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Specify font in the body of the page */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+}
+
+.title {
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* wrap contents */
+.container {
+    padding: 80px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+
+nav > a {
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* align the content inside <nav> to the right. */
+nav {
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+header {
+    width: 100%;
+    height: 600px;
+    background: -webkit-linear-gradient(to right, hsla(154, 33%, 64%, 0.459), hsla(172, 51%, 71%, 0.664)), url(../images/back1.png);
+    background: linear-gradient(to right, hsla(155, 75%, 83%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../images/back1.png);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Create a section at the top of the page (header) */
+header .texts-header {
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Configuration of the headers */
+.texts-header h1 {
+    font-size: 50px;
+    color: #fff;
+}
+
+.content-text p {
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+
+
+/* configuration of wave */
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.main-information .content-text {
+    width: 48%;
+}
+
+.content-text h3 {
+    margin-bottom: 15px;
+}
+
+.content-text h3 span {
+    background: #4d0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.content-text p {
+    padding: 0px 0px 30px 15px;
+    text-align: justify;
+}
+
+/* footer */
+footer {
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo {
+    text-align: center;
+}
+
+.content-foo h4 {
+    color: #fff;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p {
+    color: #ccc;
+}
+
+.footer-icons a {
+    padding-right: 1rem;
+}
+
+.container-about-us {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+.image-main {
+    margin-right: 20px; 
+}
+
+.content-text {
+    flex: 1; 
+}
+
+.image-main {
+    max-height: 300px; 
+    object-fit: cover;
+    width: 30%;
+    margin-right: 20px; 
+
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .container-about-us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-main {
+        max-height: 100px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 200px;
+    }
+
+    .content-text p {
+        font-weight: normal; 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    nav > a {
+        margin-right: 5px;
+    }
+
+    .texts-header h1 {
+        font-size: 35px;
+    }
+
+    .texts-header h2 {
+        font-size: 20px;
+    }
+
+    .container-about-us {
+        width: 80;
+        margin-bottom: 40px;
+    }
+
+    /* Footer */
+    .contenedor-footer {
+        flex-direction: column;
+        border: none;
+    }
+
+    .content-foo {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-foo h4 {
+        border: none;
+    }
+
+    .content-foo p {
+        color: #ccc;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+   
+    .main-information {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+
+    .main-information .content-text {
+        width: 100%; 
+    }
+}
+
